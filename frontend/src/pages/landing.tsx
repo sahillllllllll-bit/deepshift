@@ -20,6 +20,7 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { LandingNavbar } from "@/components/landing-navbar";
 import { Footer } from "@/components/footer";
+import { Helmet } from "react-helmet-async";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -137,6 +138,17 @@ const mockContests = [
 export default function Landing() {
   return (
     <div className="min-h-screen bg-background">
+       <Helmet>
+        <title>DeepShift - India's #1 Skill-Based Contest Platform</title>
+        <meta
+          name="description"
+          content="Join thousands of students competing in aptitude tests, coding contests, and hackathons. Win cash prizes and prove your skills!"
+        />
+        <link
+          rel="canonical"
+          href="https://deepshift.in/"
+        />
+      </Helmet>
       <LandingNavbar />
 
       {/* Hero Section */}
