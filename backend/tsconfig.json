@@ -6,11 +6,13 @@
     "rootDir": ".",
 
     "strict": true,
+    "noImplicitAny": false,
+
     "esModuleInterop": true,
     "skipLibCheck": true,
 
     "moduleResolution": "node",
-    "types": ["node"],
+    "types": ["node", "express"],
 
     "baseUrl": ".",
     "paths": {
