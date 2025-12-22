@@ -1,0 +1,328 @@
+You are a Principal Full-Stack Architect and Senior MERN Engineer.
+
+A half-completed, real-world MERN application named DeepShift already exists.
+Your task is to complete the remaining work, fix all issues, and fully connect the backend and frontend, delivering a production-ready SaaS platform.
+
+This is NOT a demo project.
+This must behave like a commercial, scalable, secure contest platform.
+
+1. CURRENT STATE (IMPORTANT)
+
+Frontend and backend codebases already exist
+
+Basic project structure, routing, and some models/APIs are implemented
+
+Some authentication, UI pages, and dashboards are partially done
+
+Several flows are incomplete, buggy, disconnected, or insecure
+
+Some UI components exist but are not fully wired to backend APIs
+
+Some backend logic exists but is not fully enforced or optimized
+
+👉 You must NOT rewrite everything from scratch
+👉 You must complete, fix, harden, and integrate what already exists
+
+2. CORE OBJECTIVE
+
+Finish DeepShift as a fully functional, production-ready MERN SaaS platform that:
+
+Runs locally and in production using:
+
+npm install
+npm run dev
+npm start
+
+
+Uses NO Docker
+
+Supports 2,000+ concurrent users
+
+Implements real logic only (no mocks, no placeholders)
+
+Has secure authentication, role separation, payments, contests, results, and referrals
+
+3. TECH STACK (MANDATORY — DO NOT CHANGE)
+Frontend
+
+React.js (Hooks)
+
+Context API or Redux Toolkit
+
+Tailwind CSS or Material UI (Dark Theme everywhere)
+
+Framer Motion animations
+
+Backend
+
+Node.js
+
+Express.js
+
+JWT Authentication (Access + Refresh tokens)
+
+bcrypt
+
+helmet
+
+rate limiting
+
+Database
+
+MongoDB with Mongoose (indexes required)
+
+Services
+
+Cloudinary (file uploads)
+
+Nodemailer / SMTP (HTML emails)
+
+node-cron (scheduled jobs)
+
+4. ROLES & AUTHENTICATION (FIX & COMPLETE)
+Roles
+
+Student
+
+Creator / Affiliate
+
+Admin (ONLY ONE)
+
+Admin (Fixed Requirement)
+
+Username: sahil
+
+Password: 12345sahil
+
+Admin must be pre-seeded in MongoDB
+
+❌ No admin signup
+
+✅ Separate admin login page
+
+✅ Role-based route protection
+
+5. FEATURES TO COMPLETE & FIX
+Student
+
+Signup / Login (JWT, auto logout on expiry)
+
+Dashboard with:
+
+Available contests
+
+Joined contests
+
+Previous contests
+
+Results
+
+Profile
+
+Contest joining with:
+
+QR display
+
+Payment screenshot upload
+
+Pending → Approved flow
+
+Contest attempt engine:
+
+One attempt only
+
+Timer-based
+
+Auto-save
+
+Auto-submit
+
+Coding editor with basic judge
+
+Contest Types (Admin Controlled)
+
+MCQ
+
+Fill in the blank
+
+Short answer
+
+Integer type
+
+Coding (test cases)
+
+Cheating Prevention (Frontend)
+
+Disable copy/paste
+
+Disable right-click
+
+Disable shortcuts
+
+Tab switch detection
+
+Window blur detection
+
+Fullscreen enforcement
+
+Auto-submit on refresh
+
+Dummy camera preview
+
+6. ADMIN PANEL (COMPLETE & HARDEN)
+
+Admin must be able to:
+
+Create / edit / delete contests
+
+Upload QR codes
+
+Add questions
+
+Set:
+
+Time limits
+
+Marks
+
+Negative marking
+
+commissionPerRegistration
+
+Verify payments
+
+Publish results
+
+View analytics
+
+Manage creators
+
+Approve withdrawals
+
+7. RESULTS & LEADERBOARD
+
+Admin publishes results
+
+Students can view:
+
+Score
+
+Rank
+
+Leaderboard
+
+Winner highlights
+
+Fully responsive UI
+
+8. AUTOMATED EMAIL SYSTEM (COMPLETE)
+
+Use Nodemailer + node-cron to send:
+
+Payment approval emails
+
+Contest start reminders
+
+Result published notifications
+
+Requirements:
+
+HTML templates
+
+Async sending
+
+Cron-based scheduling
+
+Production-safe configuration
+
+9. CREATOR / AFFILIATE SYSTEM (COMPLETE)
+Creator Features
+
+Signup & login
+
+Unique referral code
+
+Referral links
+
+Earnings tracking
+
+Withdrawal requests (₹300 minimum)
+
+Models Required
+
+Creator
+
+Withdrawal
+
+Contest → commissionPerRegistration
+
+Registration → referralCode
+
+Creator Dashboard Routes
+/creator/login
+/creator/signup
+/creator/dashboard
+/creator/referrals
+/creator/payments
+
+10. PERFORMANCE & SECURITY (FIX ISSUES)
+
+Stateless backend
+
+MongoDB indexes
+
+Pagination on all lists
+
+Rate limiting
+
+Helmet security headers
+
+Secure JWT handling
+
+Centralized error handling
+
+Proper env configuration (.env)
+
+11. UI REQUIREMENTS (FINALIZE)
+
+Fully responsive (mobile-first)
+
+Dark theme everywhere
+
+Smooth transitions
+
+Hamburger menu on mobile
+
+Touch-friendly components
+
+Framer Motion animations
+
+12. FINAL DELIVERABLE
+
+A fully working DeepShift platform that:
+
+Has no broken flows
+
+Has no mock logic
+
+Is secure, scalable, and production-ready
+
+Connects frontend and backend end-to-end
+
+Behaves like a real SaaS product
+
+❗ IMPORTANT
+
+Do NOT:
+
+Add Docker
+
+Add fake logic
+
+Skip security
+
+Simplify flows
+
+Break existing architecture
+
+You are finishing and hardening a real system, not creating a tutorial.

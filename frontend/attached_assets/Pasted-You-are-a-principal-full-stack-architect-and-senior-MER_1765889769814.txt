@@ -1,0 +1,360 @@
+You are a principal full-stack architect and senior MERN engineer.
+
+Build a production-ready, real-world online contest platform named DeepShift using MongoDB, Express.js, React.js, and Node.js.
+
+⚠️ DO NOT use Docker
+⚠️ DO NOT include Dockerfiles or docker-compose
+⚠️ The project must run locally and in production using standard Node workflows (npm install, npm run dev, npm start).
+
+The system must be fully functional, secure, and capable of handling 2,000+ concurrent users, behaving like a commercial SaaS product, not a demo.
+
+1. PLATFORM OVERVIEW
+
+DeepShift is a skill-based contest platform (India-focused) where students participate in:
+
+Aptitude contests
+
+General Knowledge quizzes
+
+Coding contests
+
+Hackathons
+
+Users can win cash prizes and goodies.
+Creators can promote contests and earn commissions.
+
+2. TECH STACK (MANDATORY)
+Frontend
+
+React.js (Hooks)
+
+Context API or Redux Toolkit
+
+Tailwind CSS or Material UI (Dark Theme)
+
+Framer Motion (animations)
+
+Backend
+
+Node.js
+
+Express.js
+
+JWT Authentication (Access + Refresh Tokens)
+
+bcrypt, helmet, rate limiting
+
+Database
+
+MongoDB with Mongoose (local or Atlas)
+
+Other
+
+Cloudinary (file uploads)
+
+Nodemailer / SMTP (emails)
+
+node-cron (scheduled jobs)
+
+3. USER ROLES
+
+Student
+
+Admin (ONLY ONE)
+
+Creator / Affiliate
+
+Each role has separate authentication and dashboards.
+
+4. ADMIN CONFIGURATION (FIXED)
+
+Username: sahil
+
+Password: 12345sahil
+
+Admin user must be pre-seeded in MongoDB
+
+No admin signup
+
+Separate admin login page
+
+Role-based route protection
+
+5. RESPONSIVE UI REQUIREMENTS
+
+Fully responsive (mobile, tablet, desktop)
+
+Mobile-first layout
+
+Hamburger menu on small screens
+
+Touch-friendly UI
+
+Dark theme everywhere
+
+Smooth animations and transitions
+
+6. LANDING PAGE (PUBLIC)
+
+Navbar
+
+Hero section
+
+Join Now CTA
+
+Admin Login button
+
+Previous contests (mock)
+
+Winners snapshot (mock)
+
+Footer
+
+7. STUDENT AUTHENTICATION
+Signup
+
+Name
+
+Email (unique)
+
+Password (hashed)
+
+College / School
+
+Login
+
+JWT-based auth
+
+Protected routes
+
+Auto logout on token expiry
+
+8. STUDENT DASHBOARD
+
+Navbar:
+
+Contests
+
+Previous Contests
+
+Joined Contests
+
+Results
+
+Profile
+
+Logout
+
+Contest cards show:
+
+Title
+
+Type
+
+Prize
+
+Fee
+
+Deadline
+
+Status
+
+Join button
+
+9. CONTEST JOINING & PAYMENT FLOW
+
+Join contest
+
+QR shown (uploaded by admin)
+
+Pay manually
+
+Upload screenshot
+
+Status → Pending
+
+Admin approves → access granted
+
+10. CONTEST TYPES (ADMIN CONTROLLED)
+
+MCQ
+
+Fill blank
+
+Short answer
+
+Integer type
+
+Coding (editor + test cases)
+
+Contest settings:
+
+Time limit
+
+Auto-submit
+
+Marks
+
+Negative marking (optional)
+
+11. CHEATING PREVENTION (FRONTEND)
+
+Disable copy/paste
+
+Disable right click
+
+Disable shortcuts
+
+Tab switch detection
+
+Window blur detection
+
+Fullscreen enforcement
+
+Auto-submit on refresh
+
+Dummy camera preview
+
+12. CONTEST ATTEMPT ENGINE
+
+One attempt
+
+Timer-based
+
+Auto-save
+
+Auto-submit
+
+Basic code judge
+
+13. ADMIN PANEL
+
+Admin can:
+
+Create/edit/delete contests
+
+Set commissionPerRegistration
+
+Upload QR codes
+
+Add questions
+
+Verify payments
+
+Publish results
+
+View analytics
+
+Manage creators
+
+Approve withdrawals
+
+14. RESULTS & LEADERBOARD
+
+Published by admin
+
+Student views score, rank
+
+Winner highlighting
+
+Responsive UI
+
+15. AUTOMATED EMAIL SYSTEM
+
+Send emails:
+
+Payment approval
+
+Contest start reminders
+
+Result published
+
+Requirements:
+
+Nodemailer
+
+HTML templates
+
+Async sending
+
+node-cron scheduling
+
+16. CREATOR / AFFILIATE SYSTEM
+Creator Features
+
+Signup & login
+
+Unique referral code
+
+Referral links
+
+Earnings tracking
+
+Withdrawal requests (₹300 minimum)
+
+Models
+
+Creator
+
+Withdrawal
+
+Extended Models
+
+Contest → commissionPerRegistration
+
+Registration → referralCode
+
+17. CREATOR DASHBOARD (REACT)
+
+Routes:
+
+/creator/login
+/creator/signup
+/creator/dashboard
+/creator/referrals
+/creator/payments
+
+
+Features:
+
+Earnings summary
+
+Referral links + copy
+
+Withdrawal modal (UPI/Bank)
+
+Withdrawal history
+
+18. PERFORMANCE & SCALABILITY
+
+Stateless backend
+
+MongoDB indexes
+
+Pagination
+
+Rate limiting
+
+Efficient APIs
+
+Handles 2,000+ users
+
+19. CODE QUALITY
+
+Modular folders
+
+Clean code
+
+Env configs (.env)
+
+Central error handling
+
+Secure APIs
+
+20. FINAL EXPECTATION
+
+Deliver a fully functional, responsive, dark-themed, animated, email-enabled, affiliate-enabled, production-ready MERN application, runnable without Docker, suitable for real users.
+
+Do not mock logic.
+Do not break flows.
+Build it like a real product.
