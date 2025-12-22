@@ -3,7 +3,7 @@ import express, { type Request, Response, NextFunction } from "express";
 // Load environment variables from .env into process.env (if present)
 dotenv.config();
 import { registerRoutes } from "./routes";
-import { serveStatic } from "./static";
+
 import { createServer } from "http";
 import { connectMongo } from "./mongo";
 import { storage } from "./storage";
@@ -131,9 +131,7 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  if (process.env.NODE_ENV === "production") {
-    serveStatic(app);
-  }
+ 
 
   // ALWAYS serve the app on the port specified in the environment variable PORT
   // Other ports are firewalled. Default to 5000 if not specified.
