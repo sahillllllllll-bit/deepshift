@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { storage } from "./storage";
 import { RegistrationModel } from "./models";
+import type { AuthRequest } from "./types/auth-request";
+
 import {
   loginSchema,
   studentSignupSchema,
@@ -17,13 +19,7 @@ const JWT_SECRET = process.env.SESSION_SECRET || "deepshift-secret-key-2024";
 const JWT_REFRESH_SECRET = JWT_SECRET + "-refresh";
 
 
-interface AuthRequest extends Request {
-  user?: {
-    id: string;
-    email: string;
-    role: string;
-  };
-}
+
 
 function generateTokens(user: { id: string; email: string; role: string }) {
   const accessToken = jwt.sign(
