@@ -20,6 +20,10 @@ declare module "http" {
     rawBody: unknown;
   }
 }
+app.use("/api", (req, res, next) => {
+  res.setHeader("X-Robots-Tag", "noindex");
+  next();
+});
 
 app.use(
   express.json({
