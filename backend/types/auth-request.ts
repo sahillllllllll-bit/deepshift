@@ -1,14 +1,9 @@
-import { Request } from "express";
+import type { Request } from "express";
 
-export interface AuthRequest<
-  P = any,
-  ResBody = any,
-  ReqBody = any,
-  ReqQuery = any
-> extends Request<P, ResBody, ReqBody, ReqQuery> {
+export type AuthRequest = Request & {
   user?: {
     id: string;
     email?: string;
     role?: string;
   };
-}
+};

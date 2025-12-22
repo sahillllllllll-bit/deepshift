@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { storage } from "./storage";
 import { RegistrationModel } from "./models";
-import type { AuthRequest } from "./types/auth-request";
+// import type { AuthRequest } from "./types/auth-request";
 
 import {
   loginSchema,
@@ -14,6 +14,7 @@ import {
   insertContestSchema,
   insertQuestionSchema,
 } from "./shared/schema";
+import { AuthRequest } from "./types/auth-request";
 
 const JWT_SECRET = process.env.SESSION_SECRET || "deepshift-secret-key-2024";
 const JWT_REFRESH_SECRET = JWT_SECRET + "-refresh";
@@ -289,7 +290,8 @@ export async function registerRoutes(
       const questionsCount = Array.isArray(questions) ? questions.length : 0;
 
       // Optionally include registration status if token provided
-      let registration = null;
+     let registration: any | null = null;
+
       const authHeader = req.headers.authorization;
       if (authHeader && authHeader.startsWith("Bearer ")) {
         try {
