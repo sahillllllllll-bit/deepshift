@@ -249,11 +249,11 @@ function Router() {
         </ProtectedRoute>
       </Route>
       <Route path="/contests/:contestId">
-        <ProtectedRoute allowedRoles={["student"]}>
+        {/* <ProtectedRoute allowedRoles={["student"]}> */}
           <StudentLayout>
             <ContestDetails />
           </StudentLayout>
-        </ProtectedRoute>
+        {/* </ProtectedRoute> */}
       </Route>
       <Route path="/contest/:contestId/attempt">
         <ProtectedRoute allowedRoles={["student"]}>
