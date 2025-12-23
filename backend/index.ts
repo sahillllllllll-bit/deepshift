@@ -38,24 +38,17 @@ app.use(express.urlencoded({ extended: false }));
 // Allow cross-origin requests from the client dev server during development
 app.use(
   cors({
-    origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
-      // allow requests with no origin (like curl, server-to-server)
-      if (!origin) return callback(null, true);
-      if (
-        origin.includes("localhost:3000") ||
-        origin.includes("127.0.0.1:3000") ||
-        origin.includes("localhost:5173") ||
-        origin.includes("127.0.0.1:5173") ||
-        origin.includes("localhost:4173")
-      ) {
-        return callback(null, true);
-      }
-      // In production, you may want to restrict this further
-      return callback(null, true);
-    },
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "https://deepshift-psi.vercel.app/",
+      "https://www.deepshift.in/", // if any
+    ],
     credentials: true,
-  }),
+  })
 );
+
 
 // Admin rate limiter: configurable via env
 const adminWindowMs = Number(process.env.ADMIN_RATE_WINDOW_MS || 60_000); // default 60s

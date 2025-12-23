@@ -87,6 +87,23 @@ export default function ContestDetails() {
           </CardContent>
         </Card>
       )}
+
+      <div className=" p-4 rounded-md text-gray-100">
+ <h2 className="text-lg font-semibold mb-4 text-red-500">Prizes For top Rankers</h2>
+ <ol>
+    <li>
+      <b>1-10 : </b>  Cash Prizes
+    </li>
+<br />
+    <li>
+      <b>11-20 : </b> Refund Contest Fees
+    </li>
+    <br />
+    <li>
+      <b>21-30 : </b> New Year  Goodies
+    </li>
+
+      </div>
  
  <div className=" p-4 rounded-md text-gray-100">
    <div className="rules-container">
