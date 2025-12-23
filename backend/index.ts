@@ -48,7 +48,7 @@ app.use(
         origin.includes("127.0.0.1:5173") ||
         origin.includes("localhost:4173")||
         origin.includes("https://www.deepshift.in")||
-        origin.includes("https://deepshift-psi.vercel.app/")||
+        origin.includes("https://deepshift-psi.vercel.app/")
 
       ) {
         return callback(null, true);

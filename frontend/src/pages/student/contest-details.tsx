@@ -88,9 +88,9 @@ export default function ContestDetails() {
         </Card>
       )}
 
-      <div className=" p-4 rounded-md text-gray-100">
+       <div className=" p-4 rounded-md text-gray-100">
  <h2 className="text-lg font-semibold mb-4 text-red-500">Prizes For top Rankers</h2>
- <ol>
+<ol>
     <li>
       <b>1-10 : </b>  Cash Prizes
     </li>
@@ -100,9 +100,9 @@ export default function ContestDetails() {
     </li>
     <br />
     <li>
-      <b>21-30 : </b> New Year  Goodies
+      <b>21-30 : </b> New Year Goodies
     </li>
-
+</ol>
       </div>
  
  <div className=" p-4 rounded-md text-gray-100">
