@@ -51,9 +51,9 @@ export default function ContestDetails() {
         <CardContent className="p-4">
           <div className="space-y-3">
             <div>Entry Fee: ₹{contest.fee}</div>
-            <div>Prize: ₹{contest.prize}</div>
+            <div>Pool Prize: ₹{contest.prize}</div>
             <div>Questions: { (contest as any).questionsCount ?? "-" }</div>
-            <div>Registration Status: { (contest as any).registration ? ( (contest as any).registration.paymentStatus ) : "Not Registered" }</div>
+            <div className="mt-2 text-red-400" > Registration Status: { (contest as any).registration ? ( (contest as any).registration.paymentStatus ) : "Not Registered" }</div>
           </div>
         </CardContent>
       </Card>
@@ -87,6 +87,109 @@ export default function ContestDetails() {
           </CardContent>
         </Card>
       )}
+ 
+ <div className=" p-4 rounded-md text-gray-100">
+   <div className="rules-container">
+  <h2 className="text-lg font-semibold mb-4 text-red-500">DeepShift Contest Rules & Regulations</h2>
+
+  <ol>
+    <li>
+      <p className="text-red-500 font-bold">1: </p> Participants must attempt all contest questions independently. Copying,
+      pasting, reproducing, or sharing answers or content from any external source
+      or with other users is strictly prohibited.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">2: </p>
+      Any attempt to manipulate answers, alter contest flow, use automated tools,
+      bots, scripts, browser extensions, or unfair practices will result in
+      immediate disqualification.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">3: </p>
+      Copy, paste, screen capture, screen recording, or video recording during
+      the contest is not allowed. Changing tabs, minimizing the browser, or
+      switching applications may lead to disqualification.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">4: </p>
+      Each question in the contest carries a different score based on its
+      difficulty level. Final scores are calculated as the sum of all correctly
+      answered questions.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">5: </p>
+      In case two or more participants have the same total score, rankings will
+      be decided based on the total time taken to complete the contest. The
+      participant with the lesser time will be ranked higher.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">6: </p>
+      Every contest has a fixed time limit. Once the allotted time expires, the
+      contest will automatically end, and no further submissions will be
+      accepted.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">7: </p>
+      Each participant is allowed to register and participate using only one
+      account. Multiple accounts created by the same individual will result in
+      disqualification.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">8: </p>
+      DeepShift reserves the right to monitor user activity during the contest.
+      Any suspicious behavior or violation of rules may lead to immediate
+      disqualification without prior notice.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">9: </p>
+      Winners are selected strictly based on contest rules, scores, and ranking
+      criteria. The decision of the DeepShift team will be final and binding.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">10: </p>
+      Winners will be contacted by the DeepShift team via their registered email
+      address and contact number for prize verification and distribution.
+      Participants must ensure their contact details are accurate.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">11: </p>
+      Prizes, rewards, and goodies are non-transferable and cannot be exchanged
+      for cash unless explicitly stated. Prize delivery timelines may vary.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">12: </p>
+      DeepShift reserves the right to disqualify any participant found violating
+      the rules, providing false information, or engaging in unethical behavior
+      at any stage of the contest.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">13: </p>
+      DeepShift may update or modify these rules at any time without prior notice.
+      Continued participation implies acceptance of the latest rules.
+    </li>
+<br />
+    <li>
+       <p className="text-red-500 font-bold">14: </p>
+      By participating in a DeepShift contest, users confirm that they have read,
+      understood, and agreed to all rules and regulations listed above.
+    </li>
+    <br />
+  </ol>
+</div>
+
+ </div>
 
       <div className="flex gap-3">
         <Button

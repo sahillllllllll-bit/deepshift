@@ -16,11 +16,11 @@ const ContactUs: React.FC = () => {
         </p>
 
         <p style={styles.text}>
-          <strong>Email:</strong> support@deepshift.ai
+          <strong>Email:</strong> chillpilltrio.business@gmail.com
         </p>
 
         <p style={styles.text}>
-          <strong>Contact Number:</strong> +1 234 567 890
+          <strong>Contact Number:</strong> +91 808143488
         </p>
 
         <p style={styles.text}>

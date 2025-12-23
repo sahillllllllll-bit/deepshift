@@ -11,15 +11,15 @@ const Help: React.FC = () => {
 
         <p style={styles.text}>
           <strong>Email:</strong>{" "}
-          <a href="mailto:support@deepshift.ai" style={styles.link}>
-            support@deepshift.ai
+          <a href="mailto:chillpilltrio.business@gmail.com" style={styles.link}>
+       chillpilltrio.business@gmail.com
           </a>
         </p>
 
         <p style={styles.text}>
           <strong>Contact Number:</strong>{" "}
-          <a href="tel:+1234567890" style={styles.link}>
-            +1 234 567 890
+          <a href="tel:+918081434889" style={styles.link}>
+            +91 80001 23456
           </a>
         </p>
       </section>
