@@ -62,12 +62,12 @@ export default function StudentContests() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <div>
+      {/* <div>
         <h1 className="text-2xl md:text-3xl font-bold">All Contests</h1>
         <p className="text-muted-foreground mt-1">
           Browse and join skill-based contests
         </p>
-      </div>
+      </div> */}
 
       {/* Filters */}
       <Card>

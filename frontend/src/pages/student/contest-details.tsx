@@ -8,6 +8,7 @@ import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import type { Contest } from "@shared/schema";
 import { format } from "date-fns";
+import ShareButton from "@/components/ShareButton";
 
 export default function ContestDetails() {
   const { contestId } = useParams<{ contestId: string }>();
@@ -26,12 +27,18 @@ export default function ContestDetails() {
   const now = Date.now();
   const startTime = new Date(contest.startTime).getTime();
   const canRegister = contest.status === "upcoming" && startTime > now;
+  const shareUrl = `${window.location.origin}/contests/${contest.id}`;
 
   return (
     <div className="p-6 max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold">{contest.title}</h1>
+           <ShareButton
+              title={contest.title}
+              text={contest.description}
+              url={shareUrl}
+            />
           <p className="text-muted-foreground mt-1">{contest.description}</p>
         </div>
         <div className="text-right">
@@ -225,6 +232,11 @@ export default function ContestDetails() {
         {contest.status === "completed" && (
           <Button variant="ghost">View Result</Button>
         )}
+        <ShareButton
+              title={contest.title}
+              text={contest.description}
+              url={shareUrl}
+            />
       </div>
     </div>
   );

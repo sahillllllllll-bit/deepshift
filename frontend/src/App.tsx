@@ -45,6 +45,7 @@ import ContactUs from "./pages/ContactUs";
 import HelpCenter from "./pages/HelpCenter";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Certificates from "./pages/student/Certificates";
 
 function ProtectedRoute({ 
   children, 
@@ -232,6 +233,13 @@ function Router() {
         <ProtectedRoute allowedRoles={["student"]}>
           <StudentLayout>
             <Chatbot />
+          </StudentLayout>
+        </ProtectedRoute>
+      </Route>
+      <Route path="/dashboard/certificates">
+        <ProtectedRoute allowedRoles={["student"]}>
+          <StudentLayout>
+            <Certificates />
           </StudentLayout>
         </ProtectedRoute>
       </Route>

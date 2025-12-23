@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import type { Contest } from "@shared/schema";
 import { format } from "date-fns";
 import { useLocation } from "wouter";
+import ShareButton from "@/components/ShareButton";
+
+
 
 interface ContestCardProps {
   contest: Contest;
@@ -67,6 +70,8 @@ export function ContestCard({
   const isRegistered = !!registration;
   const isApproved = registration?.paymentStatus === "approved";
   const hasSubmittedAttempt = !!registration?.attempt?.submittedAt;
+  const shareUrl = `${window.location.origin}/contests/${contest.id}`;
+
   const participants =
     typeof participantCount === "number"
       ? participantCount
@@ -210,6 +215,13 @@ export function ContestCard({
             <Trophy className="w-4 h-4" />
             {contest.type.replace("_", " ")}
           </div>
+           <div className="flex items-center gap-2">
+            <ShareButton
+              title={contest.title}
+              text={contest.description}
+              url={shareUrl}
+            />
+               </div>
         </div>
       </CardContent>
 
@@ -222,7 +234,7 @@ export function ContestCard({
           >
             View Details
           </Button>
-
+          
           {actionElement}
         </CardFooter>
       )}

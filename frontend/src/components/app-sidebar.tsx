@@ -38,8 +38,7 @@ const studentMenuItems = [
   { title: "Profile", url: "/dashboard/profile", icon: User },
   { title: "Help", url: "/dashboard/help", icon: Contact },
   { title: "AI Chatbot", url: "/dashboard/chatbot", icon: Bot  },
-
-
+  { title: "Certificates", url: "/dashboard/certificates", icon: Trophy  },
 ];
 
 export function AppSidebar() {
